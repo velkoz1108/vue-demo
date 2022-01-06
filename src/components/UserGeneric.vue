@@ -1,6 +1,7 @@
 <template>
   <h1>UserGeneric</h1>
   <h3>The suffix is {{afterUser}}</h3>
+  <global-button></global-button>
 </template>
 
 <script>

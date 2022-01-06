@@ -2,10 +2,15 @@
   <h1>User</h1>
   <h3>My Id is {{userId}}</h3>
   <button @click="ping">ping</button>
+  <Back ></Back>
 </template>
 
 <script>
+import Back from './Back.vue'
 export default {
+  components:{
+    'Back':Back
+  },
   data(){
     return {
       userId:''

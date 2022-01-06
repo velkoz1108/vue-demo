@@ -5,12 +5,12 @@ import NotFound from './components/NotFound.vue';
 import UserGeneric from './components/UserGeneric.vue';
  
 const routes = [
-    { path: '/', component: Home },
-    { path: '/home', component: Home },
-    { path: '/about', component: About },
-    { path: '/users/:id', name:'User',component: User },
+    { name:'',path: '/', component: Home },
+    { name:'home',path: '/home', component: Home },
+    { name:'about',path: '/about', component: About },
+    { name:'users',path: '/users/:id',component: User },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
-    { path: '/user-:afterUser(.*)', component: UserGeneric },
+    { name:'user',path: '/user-:afterUser(.*)', component: UserGeneric },
 ];
  
  
