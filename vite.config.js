@@ -7,6 +7,8 @@ export default defineConfig({
   server:{
     proxy:{
       '/api':'http://localhost:8080'
-    }
-  }
+    },
+    // 配置ip访问
+    host: '0.0.0.0'
+  },
 })

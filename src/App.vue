@@ -1,24 +1,30 @@
 <template>
-  <h1>Welcome to VueDemo</h1>
+  <!-- 开启顶部安全区适配 -->
+  <!-- <van-nav-bar safe-area-inset-top /> -->
+
+  <!-- <h1>Welcome to VueDemo</h1> -->
   <router-view></router-view>
 
-  <div id="view1">
-      <router-view name="view1"></router-view>
-  </div>
+
+  <router-view name="view1"></router-view>
   
   <router-view name="view2"></router-view>
+
+  <!-- 开启底部安全区适配 -->
+  <van-number-keyboard safe-area-inset-bottom />
 </template>
+<script>
+import { NavBar, NumberKeyboard } from "vant"
+export default {
+  setup() {
+    
+  },
+  components:{
+    [NavBar.name]:NavBar,
+    [NumberKeyboard.name]:NumberKeyboard
+  }
+}
+</script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-#view1 {
- border: 2px red solid;
-}
 </style>

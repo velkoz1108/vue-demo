@@ -4,6 +4,8 @@ import {createRouter,createWebHistory} from 'vue-router'
 import routes from './routes'
 import GlobalButton from './components/GlobalButton.vue'
 
+import 'vant/lib/index.css';
+
 const app = createApp(App)
 const history = createWebHistory();
 const router = createRouter({history,routes});
