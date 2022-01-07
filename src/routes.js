@@ -11,6 +11,12 @@ const routes = [
     { name:'users',path: '/users/:id',component: User },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
     { name:'user',path: '/user-:afterUser(.*)', component: UserGeneric },
+
+    {name:'multiple',path:'/multiple',components:{
+        default: About,
+        view1: NotFound,
+        view2: User
+    }}
 ];
  
  

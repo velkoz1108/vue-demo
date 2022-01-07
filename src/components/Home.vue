@@ -3,11 +3,15 @@
    <button @click="about" >Go to About Page</button>
    <button @click="user" >Go to User Page</button>
    <button @click="userGeneric" >Go to UserGeneric Page</button>
+   <button @click="multiple" >MultipleRouterView</button>
    <global-button></global-button>
 </template>
 
 <script>
 export default{
+  setup(){
+
+  },
 
   methods:{
     about(){
@@ -18,6 +22,9 @@ export default{
     },
     userGeneric () {
        this.$router.push({name:'user',params:{afterUser:'admin'}})
+    },
+    multiple(){
+       this.$router.push('multiple')
     }
   }
 }
